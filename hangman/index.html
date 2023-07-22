@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/hangman/style.css" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <title>Hangman Game</title>
+</head>
+
+<body onload="loadCategory(), showWordInScreen()">
+    <p id="category-name">Category</p>
+    <div id="category"></div>
+    <div class="hangman-img">
+        <img id="hangmanIMG" src="../assets/hangmanIMG/base.png" alt="hangman">
+    </div>
+    <div id="secret-word"></div>
+    <div class="keyboard">
+        <div class="keys">
+            <button id="letterA" onclick="checkLetter('A')">A</button>
+            <button id="letterB" onclick="checkLetter('B')">B</button>
+            <button id="letterC" onclick="checkLetter('C')">C</button>
+            <button id="letterD" onclick="checkLetter('D')">D</button>
+            <button id="letterE" onclick="checkLetter('E')">E</button>
+            <button id="letterF" onclick="checkLetter('F')">F</button>
+            <button id="letterG" onclick="checkLetter('G')">G</button>
+            <button id="letterH" onclick="checkLetter('H')">H</button>
+            <button id="letterI" onclick="checkLetter('I')">I</button>
+        </div>
+        <div class="keys">
+            <button id="letterJ" onclick="checkLetter('J')">J</button>
+            <button id="letterK" onclick="checkLetter('K')">K</button>
+            <button id="letterL" onclick="checkLetter('L')">L</button>
+            <button id="letterM" onclick="checkLetter('M')">M</button>
+            <button id="letterN" onclick="checkLetter('N')">N</button>
+            <button id="letterO" onclick="checkLetter('O')">O</button>
+            <button id="letterP" onclick="checkLetter('P')">P</button>
+            <button id="letterQ" onclick="checkLetter('Q')">Q</button>
+            <button id="letterR" onclick="checkLetter('R')">R</button>
+        </div>
+        <div class="keys">
+            <button id="letterS" onclick="checkLetter('S')">S</button>
+            <button id="letterT" onclick="checkLetter('T')">T</button>
+            <button id="letterU" onclick="checkLetter('U')">U</button>
+            <button id="letterV" onclick="checkLetter('V')">V</button>
+            <button id="letterW" onclick="checkLetter('W')">W</button>
+            <button id="letterX" onclick="checkLetter('X')">X</button>
+            <button id="letterY" onclick="checkLetter('Y')">Y</button>
+            <button id="letterZ" onclick="checkLetter('Z')">Z</button>
+            <button id="letterÇ" onclick="checkLetter('Ç')">Ç</button>
+        </div>
+    </div>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/words.js"></script>
+</body>
+
+</html>
