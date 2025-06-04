@@ -78,15 +78,20 @@ function checkWrongLetter(bt) {
 }
 
 function checkRightLetter(bt) {
-  document.getElementById("letter" + bt).style.backgroundColor = "#5c966b";
-  document.getElementById("letter" + bt).style.border = "none";
+  const btn = document.getElementById("letter" + bt);
+
+  btn.style.backgroundColor = "#5c966b";
+  btn.style.border = "none";
+
+  btn.classList.add("right-answer");
+  setTimeout(() => btn.classList.remove("right-answer"), 300);
 }
 
 function checkLetter(letter) {
   if (!alphabet.includes(letter)) {
     return;
   }
-  if(document.getElementById("letter" + letter).disabled) {
+  if (document.getElementById("letter" + letter).disabled) {
     return;
   }
 
@@ -104,7 +109,9 @@ function checkLetter(letter) {
     checkWrongLetter(letter);
     life--;
     loadHangman();
-    document.getElementById("hit").play();
+    const hit = document.getElementById("hit");
+    hit.currentTime = 0;
+    hit.play();
   }
 }
 
@@ -193,6 +200,18 @@ function setLanguage(lang) {
     localStorage.setItem("lang", "pt_br");
   }
   window.location.reload();
+}
+
+function renderKeyboard() {
+  const keyboardContainer = document.querySelector(".keyboard .keys-container");
+  alphabet.forEach((letter) => {
+    const btn = document.createElement("button");
+    btn.classList.add("custom-btn-keys");
+    btn.id = `letter${letter}`;
+    btn.textContent = letter;
+    btn.addEventListener("click", () => checkLetter(letter));
+    keyboardContainer.appendChild(btn);
+  });
 }
 
 function getLanguage() {

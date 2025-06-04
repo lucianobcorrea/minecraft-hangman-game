@@ -13,7 +13,7 @@
     <title>Hangman Game</title>
   </head>
 
-  <body onload="loadCategory(), showWordInScreen()">
+  <body onload="loadCategory(), showWordInScreen(), renderKeyboard()">
     <audio id="hit">
       <source src="../assets/audio/hit.mp3" type="audio/mp3" />
     </audio>
@@ -71,93 +71,7 @@
     </div>
     <div id="secret-word"></div>
     <div class="keyboard">
-      <div class="keys">
-        <button class="custom-btn-keys" id="letterA" onclick="checkLetter('A')">
-          A
-        </button>
-        <button class="custom-btn-keys" id="letterB" onclick="checkLetter('B')">
-          B
-        </button>
-        <button class="custom-btn-keys" id="letterC" onclick="checkLetter('C')">
-          C
-        </button>
-        <button class="custom-btn-keys" id="letterD" onclick="checkLetter('D')">
-          D
-        </button>
-        <button class="custom-btn-keys" id="letterE" onclick="checkLetter('E')">
-          E
-        </button>
-        <button class="custom-btn-keys" id="letterF" onclick="checkLetter('F')">
-          F
-        </button>
-        <button class="custom-btn-keys" id="letterG" onclick="checkLetter('G')">
-          G
-        </button>
-        <button class="custom-btn-keys" id="letterH" onclick="checkLetter('H')">
-          H
-        </button>
-        <button class="custom-btn-keys" id="letterI" onclick="checkLetter('I')">
-          I
-        </button>
-      </div>
-      <div class="keys">
-        <button class="custom-btn-keys" id="letterJ" onclick="checkLetter('J')">
-          J
-        </button>
-        <button class="custom-btn-keys" id="letterK" onclick="checkLetter('K')">
-          K
-        </button>
-        <button class="custom-btn-keys" id="letterL" onclick="checkLetter('L')">
-          L
-        </button>
-        <button class="custom-btn-keys" id="letterM" onclick="checkLetter('M')">
-          M
-        </button>
-        <button class="custom-btn-keys" id="letterN" onclick="checkLetter('N')">
-          N
-        </button>
-        <button class="custom-btn-keys" id="letterO" onclick="checkLetter('O')">
-          O
-        </button>
-        <button class="custom-btn-keys" id="letterP" onclick="checkLetter('P')">
-          P
-        </button>
-        <button class="custom-btn-keys" id="letterQ" onclick="checkLetter('Q')">
-          Q
-        </button>
-        <button class="custom-btn-keys" id="letterR" onclick="checkLetter('R')">
-          R
-        </button>
-      </div>
-      <div class="keys">
-        <button class="custom-btn-keys" id="letterS" onclick="checkLetter('S')">
-          S
-        </button>
-        <button class="custom-btn-keys" id="letterT" onclick="checkLetter('T')">
-          T
-        </button>
-        <button class="custom-btn-keys" id="letterU" onclick="checkLetter('U')">
-          U
-        </button>
-        <button class="custom-btn-keys" id="letterV" onclick="checkLetter('V')">
-          V
-        </button>
-        <button class="custom-btn-keys" id="letterW" onclick="checkLetter('W')">
-          W
-        </button>
-        <button class="custom-btn-keys" id="letterX" onclick="checkLetter('X')">
-          X
-        </button>
-        <button class="custom-btn-keys" id="letterY" onclick="checkLetter('Y')">
-          Y
-        </button>
-        <button class="custom-btn-keys" id="letterZ" onclick="checkLetter('Z')">
-          Z
-        </button>
-        <button class="custom-btn-keys" id="letterÇ" onclick="checkLetter('Ç')">
-          Ç
-        </button>
-      </div>
+      <div class="keys-container"></div>
     </div>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/wordsEn.js"></script>
