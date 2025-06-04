@@ -86,6 +86,9 @@ function checkLetter(letter) {
   if (!alphabet.includes(letter)) {
     return;
   }
+  if(document.getElementById("letter" + letter).disabled) {
+    return;
+  }
 
   document.getElementById("letter" + letter).disabled = true;
   document.getElementById("letter" + letter).style.cursor = "not-allowed";
@@ -101,6 +104,7 @@ function checkLetter(letter) {
     checkWrongLetter(letter);
     life--;
     loadHangman();
+    document.getElementById("hit").play();
   }
 }
 
